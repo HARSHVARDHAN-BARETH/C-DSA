@@ -96,6 +96,16 @@ void deletion(node* &head, int val)
     
     delete todelete;
 }
+void deletAtEnd(node* &head)
+{
+    node* temp = head;
+    while(temp->next->next!=NULL)
+    {
+        temp=temp->next;
+    }
+    temp->next=NULL;
+   
+}
 
 int main()
 {
