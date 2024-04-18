@@ -114,6 +114,7 @@ int main()
     insertAtHead(head, 2);
     insertAtHead(head, 3);
     insertAtHead(head, 4);
+    insertAtHead(head, 5);
     display(head);
     deletion(head, 2);
     deleteAtHead(head);
