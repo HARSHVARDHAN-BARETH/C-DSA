@@ -1,6 +1,6 @@
-To solve this problem, we need to find all unique quadruples in the array that sum up to a given number \( K \). Here’s a step-by-step explanation of how we can achieve this in C++:
+To solve this problem, we need to find all unique quadruples in the array that sum up to a given number \( K \). Here’s a step-by-step explanation of how we can achieve this in C++:**
 
-1. **Sort the Array**: Sorting helps in easily skipping duplicates and also makes it easier to use two pointers to find pairs that sum up to a specific value.
+1. **Sort the Array**: **Sorting helps in easily skipping duplicates and also makes it easier to use two pointers to find pairs that sum up to a specific value.**
 2. **Iterate Over Pairs**: Use two nested loops to fix the first two elements of the quadruple.
 3. **Two-Pointer Technique**: For the remaining two elements, use the two-pointer technique to find pairs that sum up to the required value.
 4. **Skip Duplicates**: Ensure to skip duplicate elements to avoid repeated quadruples.
