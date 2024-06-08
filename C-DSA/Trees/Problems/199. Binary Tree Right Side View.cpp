@@ -12,25 +12,25 @@
 class Solution {
 public:
     vector<int> rightSideView(TreeNode* root) {
-        vector<int> output;
-        queue<TreeNode*> q;
-        q.push(root);
-        if(!root) return output;
+        vector<int> output; // Output store karne ke liye
+        queue<TreeNode*> q; // Queue for level order traversal
+        q.push(root); // Root node ko queue me daalo
+        if(!root) return output; // Agar root null hai, toh empty output return karo
         
-        while(!q.empty())
+        while(!q.empty()) // Jab tak queue khali nahi hoti
         {
-            vector<int> helper;
-            int n = q.size();
+            vector<int> helper; // Temporary helper vector
+            int n = q.size(); // Current level ke nodes ki count
            
-            for(int i=0;i<n;i++){
-                TreeNode* node = q.front();
-                q.pop();
-                helper.push_back(node->val);
-                if(node->left) q.push(node->left);
-                if(node->right) q.push(node->right);
+            for(int i = 0; i < n; i++){
+                TreeNode* node = q.front(); // Queue ke front se node lo
+                q.pop(); // Us node ko queue se hatao
+                helper.push_back(node->val); // Node ke value ko helper me daalo
+                if(node->left) q.push(node->left); // Left child ko queue me daalo
+                if(node->right) q.push(node->right); // Right child ko queue me daalo
             }
-            output.push_back(helper[n-1]);
+            output.push_back(helper[n-1]); // Helper ke last element ko output me daalo
         }
-        return output;
+        return output; // Final output return karo
     }
 };
